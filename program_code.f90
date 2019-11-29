@@ -19,6 +19,10 @@ CALL problem_setup(rundata, axes_, particle_, density, dx_, dy_)
 ! Use Gauss-Seigel method to evaluate grid potential
 CALL calc_potential(rundata, density, dx_, dy_, pot)
 
+! Run 1000 steps of particle movement
+
+! Write output file
+
 ! Print execution time
 CALL CPU_TIME(execution_time)
 print '(A,F0.2,A)', "Execution time: ", execution_time, "s"
