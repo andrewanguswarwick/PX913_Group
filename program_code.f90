@@ -1,6 +1,7 @@
 PROGRAM main
 
 USE potential
+USE verlet
 
 IMPLICIT NONE
 
@@ -20,6 +21,7 @@ CALL problem_setup(rundata, axes_, particle_, density, dx_, dy_)
 CALL calc_potential(rundata, density, dx_, dy_, pot)
 
 ! Run 1000 steps of particle movement
+!CALL move_particle()
 
 ! Write output file
 

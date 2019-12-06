@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # compiled files
-files="kinds.f90 command_line.f90 create_axis.f90 potential.f90 program_code.f90"
+files="kinds.f90 command_line.f90 create_axis.f90 potential.f90 \
+ verlet.f90 program_code.f90"
 
 # output file
 ofile="prog"
