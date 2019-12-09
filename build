@@ -14,6 +14,6 @@ fflags="-Wall -Wextra -std=f2003 -O3"
 gfortran $fflags $files -o $ofile
 
 # run
-./$ofile nx=50 ny=50 problem=double
+./$ofile nx=5 ny=5 problem=single
 
 # visualise results
