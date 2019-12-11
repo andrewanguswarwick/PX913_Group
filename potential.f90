@@ -24,7 +24,6 @@ TYPE particle
   REAL(REAL64), DIMENSION(:,:), ALLOCATABLE :: pos, vel, a
 END TYPE
 
-
 CONTAINS
 
 SUBROUTINE user_inputs(rundat)
@@ -175,7 +174,7 @@ SUBROUTINE calc_potential(rundat, rho, dx, dy, phi)
     END DO
     d_rms = SQRT(d_rms)
   END DO
-
+  
   PRINT '(A)', "Grid potential converged."
 
 END SUBROUTINE
