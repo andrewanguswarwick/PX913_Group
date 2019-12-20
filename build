@@ -1,19 +1,24 @@
 #!/bin/bash
 
 # compiled files
-files="kinds.f90 command_line.f90 create_axis.f90 potential.f90 \
- verlet.f90 program_code.f90"
+files="kinds.f90 command_line.f90 create_axis.f90 potential.f90 verlet.f90 re_writenetcdf.f90 program_code.f90"
 
 # output file
-ofile="prog"
+ofile="main_program"
+
+# compiler
+fc=gfortran
 
 # flags
-fflags="-Wall -Wextra -std=f2003 -O3"
+fflags=`nf-config --fflags`
+flibs=`nf-config --flibs`
 
 # compile
-gfortran $fflags $files -o $ofile
+$fc -g -std=f2003 -Wall $fflags $files $flibs -o $ofile
 
 # run
 ./$ofile nx=100 ny=100 problem=double
 
 # visualise results
+#python3 pseudoplot.py
+#python3 scatter.py
