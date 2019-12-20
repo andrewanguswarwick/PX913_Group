@@ -13,3 +13,5 @@ kinds.f90: module which defines variable kinds
 command_line.f90: module which facilitates reading of command line arguments  
   
 create_axis.f90: module for creation of an axis of a specified number of cell-centred values between specified bounds, wih the addition of a specified number of ghost cells either side
+
+re_writenetcdf.f90: is a subroutine used for visualisation of array elements, packaged in a format that allows subsequent visualisation using a python script. 
