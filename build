@@ -17,8 +17,8 @@ flibs=`nf-config --flibs`
 $fc -g -std=f2003 -Wall $fflags $files $flibs -o $ofile
 
 # run
-./$ofile nx=100 ny=100 problem=double
+./$ofile nx=100 ny=100 problem=single
 
 # visualise results
-#python3 pseudoplot.py
+python3 pseudoplot.py
 #python3 scatter.py
