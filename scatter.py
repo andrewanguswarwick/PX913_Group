@@ -1,11 +1,11 @@
 # Scatterplot of particle position in x vs particle position in y
+# Author: I.Ismail
 import matplotlib.pyplot as plt
 import numpy as np
 import netCDF4 as NC
 
 # Use NetCDF
 data = NC.Dataset("px913.nc","r",format="NETCDF4")
-#fh = Dataset(my_example_nc_file, mode='r')
 
 position = data.variables['electron_position']
 
@@ -23,15 +23,13 @@ print(position[0,1], position[0,0])
 fig, ax = plt.subplots()
 
 #Scatter plot
-c = ax.scatter(position[:,0],position[:,1])
-#plt.scatter(position[:,0],position[:,1])
+plt.scatter(position[:,0],position[:,1])
 ax.set_title('Electron position')
 ax.set_xlabel('x')
 ax.set_ylabel('y')
 ax.set_ylim(yran)
 ax.set_xlim(xran)
 
-#data.close()
 
 plt.show()
 
