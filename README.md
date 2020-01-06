@@ -1,5 +1,6 @@
 # PX913_Group
 
+Github public repository: https://github.com/andrewanguswarwick/PX913_Group.git  
 potential.f90: takes in command line arguments for grid size and chosen problem; establishes initial electron position and velocity, as well as the grid with charge density, dependent on chosen problem; calculates the electric potential for the grid using the Gauss-Seigel method based on the charge density.  
   
 verlet.f90: calculates electric field for the grid based on the potential; moves the electron 1000 timesteps using the velocity verlet algorithm and the Lorentz force.  
