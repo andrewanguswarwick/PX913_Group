@@ -21,4 +21,4 @@ $fc -g -std=f2003 -Wall $fflags $files $flibs -o $ofile
 
 # visualise results
 python3 pseudoplot.py
-#python3 scatter.py
+python3 scatter.py
